@@ -96,12 +96,8 @@ function placePiece(idx) {
 }
 
 function checkForTie() {
-    board.forEach(function(tile) {
-        if (tile === null) {
-            tie = false
-        }else {
-            tie = true
-        }
+   tie = board.every(function(sqr) {
+        return sqr !== null
     })
 }
 
