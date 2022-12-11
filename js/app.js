@@ -14,6 +14,8 @@ const winningCombos = [
     [2, 5, 8], 
     [2, 4, 6]]
 
+const resetBtnEl = document.getElementById('reset-button')
+
 /*---------------------------- Variables (state) ----------------------------*/
 
 let board, turn, winner, tie
@@ -21,7 +23,7 @@ let board, turn, winner, tie
 
 /*------------------------ Cached Element References ------------------------*/
 
-// document.querySelectorAll("div")
+document.getElementById('the-reset')
 document.getElementById('message')
 document.querySelectorAll('.sqr')
 document.querySelector('.board')
@@ -29,6 +31,7 @@ document.querySelector('.board')
 /*----------------------------- Event Listeners -----------------------------*/
 
 document.querySelector('.board').addEventListener('click', handleClick)
+document.getElementById('the-reset').addEventListener('click', init)
 
 
 /*-------------------------------- Functions --------------------------------*/
@@ -126,6 +129,7 @@ function switchPlayerTurn() {
         turn = turn * -1
     }
 }
+
 
 
 
